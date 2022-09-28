@@ -1,0 +1,240 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+input {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(18, 119, 31);
+  border-top: 40px solid rgb(99, 52, 22);
+  border-left: 40px solid rgb(53, 27, 10);
+  border-right: 40px solid rgb(153, 78, 28);
+  border-bottom: 40px solid rgb(97, 45, 11);
+
+  box-shadow: inset 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  color: white;
+  font-size: 5rem;
+  margin-top: 3rem;
+}
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  justify-items: center;
+  gap: 2rem;
+
+  position: relative;
+}
+
+/* ------------------------- advertise ------------------------ */
+.advertise {
+  width: 20rem;
+
+  font-size: 3rem;
+  color: white;
+
+  position: absolute;
+  top: 20%;
+}
+
+.advertise-left {
+  left: -25rem;
+}
+
+.advertise-right {
+  right: -25rem;
+}
+
+.advertise-heading {
+  background-image: linear-gradient(to right, red, blue);
+  text-align: center;
+}
+
+.advertise-content {
+  height: 300px;
+  background-color: red;
+  background-image: url(./images/未命名.png);
+  background-size: 105%;
+}
+
+/* --------------------- mj setting ---------------------------- */
+/* TODO */
+.card {
+  width: 150px;
+  height: 200px;
+  perspective: 120rem;
+
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background-size: 100% 100%;
+
+  line-height: 190px;
+  text-align: center;
+
+  backface-visibility: hidden;
+  transition: 0.2s;
+}
+
+.card-front {
+  background-image: url(./images/mj-back.svg);
+  font-size: 5rem;
+}
+
+.card-back {
+  font-size: 12rem;
+  rotate: Y 180deg;
+}
+
+.card-1 .card-back {
+  background-image: url(./images/mj-circle-1.svg);
+}
+
+.card-2 .card-back {
+  background-image: url(./images/mj-circle-2.svg);
+}
+
+.card-3 .card-back {
+  background-image: url(./images/mj-circle-3.svg);
+}
+
+.card-4 .card-back {
+  background-image: url(./images/mj-circle-4.svg);
+}
+
+.card-5 .card-back {
+  background-image: url(./images/mj-circle-5.svg);
+}
+
+.card-6 .card-back {
+  background-image: url(./images/mj-circle-6.svg);
+}
+
+.card-7 .card-back {
+  background-image: url(./images/mj-circle-7.svg);
+}
+
+.card-8 .card-back {
+  background-image: url(./images/mj-circle-8.svg);
+}
+
+.card-9 .card-back {
+  background-image: url(./images/mj-circle-9.svg);
+}
+
+.card-10 .card-back {
+  background-image: url(./images/mj-circle-1.svg);
+}
+
+.card-11 .card-back {
+  background-image: url(./images/mj-circle-2.svg);
+}
+
+.card-12 .card-back {
+  background-image: url(./images/mj-circle-3.svg);
+}
+
+.card-13 .card-back {
+  background-image: url(./images/mj-circle-4.svg);
+}
+
+.card-14 .card-back {
+  background-image: url(./images/mj-circle-5.svg);
+}
+
+.card-15 .card-back {
+  background-image: url(./images/mj-circle-6.svg);
+}
+
+.card-16 .card-back {
+  background-image: url(./images/mj-circle-7.svg);
+}
+
+.card-17 .card-back {
+  background-image: url(./images/mj-circle-8.svg);
+}
+
+.card-18 .card-back {
+  background-image: url(./images/mj-circle-9.svg);
+}
+
+/* -------------------------- card click effect -------------------- */
+/* TODO */
+#card-1:checked ~ #label-1 .card .card-front,
+#card-2:checked ~ #label-2 .card .card-front,
+#card-3:checked ~ #label-3 .card .card-front,
+#card-4:checked ~ #label-4 .card .card-front,
+#card-5:checked ~ #label-5 .card .card-front,
+#card-6:checked ~ #label-6 .card .card-front,
+#card-7:checked ~ #label-7 .card .card-front,
+#card-8:checked ~ #label-8 .card .card-front,
+#card-9:checked ~ #label-9 .card .card-front,
+#card-10:checked ~ #label-10 .card .card-front,
+#card-11:checked ~ #label-11 .card .card-front,
+#card-12:checked ~ #label-12 .card .card-front,
+#card-13:checked ~ #label-13 .card .card-front,
+#card-14:checked ~ #label-14 .card .card-front,
+#card-15:checked ~ #label-15 .card .card-front,
+#card-16:checked ~ #label-16 .card .card-front,
+#card-17:checked ~ #label-17 .card .card-front,
+#card-18:checked ~ #label-18 .card .card-front {
+  rotate: Y 180deg;
+}
+
+#card-1:checked ~ #label-1 .card .card-back,
+#card-2:checked ~ #label-2 .card .card-back,
+#card-3:checked ~ #label-3 .card .card-back,
+#card-4:checked ~ #label-4 .card .card-back,
+#card-5:checked ~ #label-5 .card .card-back,
+#card-6:checked ~ #label-6 .card .card-back,
+#card-7:checked ~ #label-7 .card .card-back,
+#card-8:checked ~ #label-8 .card .card-back,
+#card-9:checked ~ #label-9 .card .card-back,
+#card-10:checked ~ #label-10 .card .card-back,
+#card-11:checked ~ #label-11 .card .card-back,
+#card-12:checked ~ #label-12 .card .card-back,
+#card-13:checked ~ #label-13 .card .card-back,
+#card-14:checked ~ #label-14 .card .card-back,
+#card-15:checked ~ #label-15 .card .card-back,
+#card-16:checked ~ #label-16 .card .card-back,
+#card-17:checked ~ #label-17 .card .card-back,
+#card-18:checked ~ #label-18 .card .card-back {
+  rotate: Y 360deg;
+}
